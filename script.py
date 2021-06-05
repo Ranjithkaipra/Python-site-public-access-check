@@ -7,7 +7,7 @@ import ssl
 #curl -s -o /dev/null -I -w "%{http_code}" http://deployer.wrg-apps.com
 #curl -I "http://deployer.wrg-apps.com"
 
-sites = open("demofile.txt", "r")
+sites = open("domains.txt", "r")
 for dev_urls in sites:
     #print(x.rstrip())
     response = requests.get(url=dev_urls.rstrip(), allow_redirects=True)
